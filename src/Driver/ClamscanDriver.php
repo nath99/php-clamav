@@ -53,7 +53,9 @@ class ClamscanDriver extends AbstractDriver
      */
     public function ping()
     {
-        return !!$this->version();
+        exec($this->getExecutable() . ' -p 1', $out, $return);
+
+        return $out[0] == "PONG";
     }
 
     /**

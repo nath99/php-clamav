@@ -46,6 +46,7 @@ class Scanner implements ScannerInterface
 
     /**
      * @inheritdoc
+     * @return ResultInterface
      * @throws RuntimeException
      */
     public function scan($path)
